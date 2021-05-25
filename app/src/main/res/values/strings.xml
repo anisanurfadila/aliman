@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">Aliman</string>
+
+    <string name="tEmail">Masukan Email :</string>
+    <string name="tPassword">Masukan Password :</string>
+    <string name="bsignin">LOGIN</string>
+    <string name="tData">Data Anisa</string>
+    <string name="txemail">Ini Hasil Email</string>
+    <string name="txpassword">Ini Hasil Password</string>
+    <string name="label2">Login Berhasil</string>
+    <string name="tLogin">LOGIN</string>
+    <string name="var1">Ini pesan</string>
+
+    <string name="lihatdata">Lihat Data</string>
+    <string name="editdata">Lihat Nomor</string>
+    <string name="datakontak">Data Kontak</string>
+    <string name="namaitem"> Nama Item </string>
+    <string name="namaitem2"> Nama judul </string>
+    <string name="detailkontak">Detail Kontak</string>
+    <string name="nama">Nama</string>
+    <string name="notel">Nomor telepon</string>
+
 </resources>
