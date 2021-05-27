@@ -3,10 +3,17 @@ package com.example.aliman;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.os.Vibrator;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
+import android.content.Context;
+import android.widget.Toast;
 
 public class ActivityDzikirCounter extends AppCompatActivity {
-    TextView tvnama,tvnomor;
+    TextView tvnama,tvnomor,tvmaks;
+    int max,hitungan;
+    Button btpopup,bttambah,btkurang,btreset;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -14,54 +21,95 @@ public class ActivityDzikirCounter extends AppCompatActivity {
 
         tvnama = findViewById(R.id.tvNamaKontak);
         tvnomor = findViewById(R.id.tvNomorTelepon);
+        hitungan = 0;
+        tvmaks = findViewById(R.id.txtmaks);
+
+        btpopup = findViewById(R.id.btnpopup);
+        bttambah = findViewById(R.id.btntambah);
+        btkurang = findViewById(R.id.btnkurang);
+        btreset = findViewById(R.id.btnreset);
 
         Bundle bundle = getIntent().getExtras();
 
         String nomor = bundle.getString("a");
-
+        Vibrator vibe = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE) ;
         switch (nomor)
         {
             case "1":
-                tvnama.setText("Inayah M");
-                tvnomor.setText("1238929");
+                tvnama.setText("Astaghfirullah");
+                max = 10;
+                tvmaks.setText(Integer.toString(max));
+               // tvnomor.setText("1238929");
                 break;
             case "2":
-                tvnama.setText("Ilham Mubarok");
-                tvnomor.setText("243739");
+                tvnama.setText("Subhanallah");
+                max = 99;
+                tvmaks.setText(Integer.toString(max));
+             //   tvnomor.setText("243739");
                 break;
             case "3":
-                tvnama.setText("Erisna sutisna");
-                tvnomor.setText("32387923");
+                tvnama.setText("Alhamdulillah");
+             //   tvnomor.setText("32387923");
                 break;
             case "4":
-                tvnama.setText("fikri fadlu");
-                tvnomor.setText("4372732");
+                tvnama.setText("Allahuakbar");
+             //   tvnomor.setText("4372732");
                 break;
             case "5":
-                tvnama.setText("Maulana hidayah");
-                tvnomor.setText("5983239");
+                tvnama.setText("Laa Ilaaha Illallaahu Wahdahuu Laa Syariika Lah, Lahul Mulku Wa Lahul Hamdu Wa Huwa’Alaa Kulli Syai’in Qadhr");
+             //   tvnomor.setText("5983239");
                 break;
             case "6":
-                tvnama.setText("Intan perwari");
-                tvnomor.setText("623989832");
+                tvnama.setText("Allaahumma antas salaamu wa minkas salaamu wa ilaika ya’uduus salaamu fa hayyinaa rabbanaa bis salaami wa adkhinal- jannata daaras salaami tabaarakta rabbanaa wa ta’aalaita yaa dzal jalaali wal ikram");
+             //   tvnomor.setText("623989832");
                 break;
             case "7":
-                tvnama.setText("vina panduwinata");
-                tvnomor.setText("72399237");
+                tvnama.setText("Wa ilaahukum ilaahuw waahidun laa ilaaha ilaa huwar rahmaanur rahiim.");
+            //    tvnomor.setText("72399237");
                 break;
             case "8":
-                tvnama.setText("gita gutawa");
-                tvnomor.setText("8237323");
+                tvnama.setText("Allaahumma laa maani’a limaa a’thaita wa laa mu’thiya limaa mana’ta wa laa radda limaa qadhaita wa laa yanfa’u dzal-jaddi minkal-jaddu.");
+            //    tvnomor.setText("8237323");
                 break;
             case "9":
-                tvnama.setText("Vian Munawaroh");
-                tvnomor.setText("9238723");
+                tvnama.setText("Allaahu akbar kabiiraw wal-hamdu lillaahi katsiiraw wa subhaanallahi bukrataw wa ashiila. Laa ilaaha illallaahu wahdahuu laa syariikalahu, lahul mulku wa lahul hamdu yuhyii wa yumiitu wa huwa’alaa kulli syai’in qadiir");
+            //    tvnomor.setText("9238723");
                 break;
             case "10":
-                tvnama.setText("Lutfiatun");
-                tvnomor.setText("10329832");
+                tvnama.setText("Wa laa haula wa laa quwwata illaa billaahil-‘aliyyil ‘azhiim. Astagfirullaahal-‘azhiim.");
+            //    tvnomor.setText("10329832");
                 break;
         }
+
+        bttambah.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (hitungan<max) {
+                    hitungan++;
+                    vibe.vibrate(80);
+                    tvnomor.setText(Integer.toString(hitungan));
+                }
+                else {
+                    Toast.makeText(getApplicationContext(), "udh maks",Toast.LENGTH_LONG).show();
+
+                }
+            }
+        });
+
+        btkurang.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                hitungan--;
+                tvnomor.setText(Integer.toString(hitungan));
+            }
+        });
+        btreset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                hitungan = 0;
+                tvnomor.setText(Integer.toString(hitungan));
+            }
+        });
 
     }
 }
