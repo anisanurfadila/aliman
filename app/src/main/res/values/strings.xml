@@ -20,4 +20,11 @@
     <string name="nama">Nama</string>
     <string name="notel">Nomor telepon</string>
 
+    <string-array name="testspin">
+        <item>satu</item>
+        <item>dua</item>
+        <item>tiga</item>
+        <item>empat</item>
+    </string-array>
+
 </resources>

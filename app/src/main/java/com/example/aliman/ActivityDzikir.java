@@ -15,6 +15,7 @@ public class ActivityDzikir extends AppCompatActivity {
     private ListView list;
     private ListViewAdapter adapter;
 
+
     String[] listNomor;
     String[] listDesc;
 

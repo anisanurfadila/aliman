@@ -76,11 +76,12 @@
                             >
 
                             <ImageView
-                                android:layout_width="100dp"
-                                android:layout_height="100dp"
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
                                 android:id="@+id/gbrjadwal"
                                 android:src="@drawable/adzan"
-                                android:layout_centerInParent="true">
+                                android:layout_centerInParent="false"
+                                android:layout_centerHorizontal="true">
 
                             </ImageView>
                             <TextView
@@ -93,6 +94,7 @@
                                 android:layout_centerInParent="true"
                                 android:textColor="@color/black"
                                 android:layout_below="@id/gbrjadwal"
+                                android:layout_marginTop="5dp"
                                 ></TextView>
 
                             <Button
@@ -134,7 +136,9 @@
                                 android:layout_height="80dp"
                                 android:id="@+id/gbrdzikir"
                                 android:src="@drawable/tasbih"
-                                android:layout_centerInParent="true">
+                                android:layout_centerInParent="false"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="10dp">
 
                             </ImageView>
                             <TextView
@@ -147,6 +151,7 @@
                                 android:layout_centerInParent="true"
                                 android:textColor="@color/black"
                                 android:layout_below="@id/gbrdzikir"
+                                android:layout_marginTop="5dp"
                                 ></TextView>
                             <Button
                                 android:layout_width="match_parent"
