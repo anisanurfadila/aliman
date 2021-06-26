@@ -47,7 +47,7 @@ public class ActivityDzikirCounter extends AppCompatActivity {
                 tvnama.setText("Astaghfirullah");
                 max = 99;
                 tvmaks.setText(Integer.toString(max));
-                tvarab.setText("أستغفر الله");
+             //   tvarab.setText("أستغفر الله");
 
                // tvnomor.setText("1238929");
                 break;

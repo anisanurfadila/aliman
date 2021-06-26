@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -10,23 +10,400 @@
     android:background="@color/bg">
 
 
-   <Spinner
+      <LinearLayout
+          android:id="@+id/header"
+          android:layout_width="match_parent"
+          android:layout_height="100dp"
+          android:orientation="horizontal"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="1.0"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintVertical_bias="0.027">
+
+         <androidx.cardview.widget.CardView
+             android:layout_width="0dp"
+             android:layout_height="90dp"
+             android:layout_marginLeft="8dp"
+             android:layout_marginRight="8dp"
+             android:layout_weight="2"
+             android:padding="3dp"
+             app:cardCornerRadius="20dp"
+
+             >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg">
+
+               <ImageView
+                   android:id="@+id/gbrjadwal"
+                   android:layout_width="50dp"
+                   android:layout_height="50dp"
+                   android:layout_centerInParent="false"
+                   android:layout_centerHorizontal="true"
+                   android:src="@drawable/adzan">
+
+               </ImageView>
+
+               <TextView
+                   android:id="@+id/txtjadwal"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@id/gbrjadwal"
+                   android:layout_centerInParent="true"
+                   android:layout_marginTop="5dp"
+                   android:text="JADWAL ADZAN"
+                   android:textColor="@color/black"
+                   android:textSize="16sp"
+                   android:textStyle="bold"></TextView>
+
+               <Button
+                   android:id="@+id/btnjadwal"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:background="@color/transparan"></Button>
+
+            </RelativeLayout>
+         </androidx.cardview.widget.CardView>
+
+      </LinearLayout>
+
+
+   <TextView
+       android:id="@+id/tv"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
-       android:id="@+id/spinner1"
-       android:layout_gravity="center_horizontal"
-       android:layout_marginTop="200dp"
-       android:background="@color/white"
+       android:layout_below="@id/header"
+       android:text="Pilih Nama Kota"
+       android:textColor="@color/black"
+       android:textSize="16sp"
+       android:textStyle="normal"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.127"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/header"
+       app:layout_constraintVertical_bias="0.062" />
+
+   <Spinner
+          android:id="@+id/spinner1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+       android:maxHeight="200dp"
+          android:layout_below="@id/header"
+          android:layout_alignParentEnd="true"
+          android:layout_alignParentRight="true"
+          android:layout_gravity="center_horizontal"
+          android:background="@color/white"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="0.346"
+          app:layout_constraintStart_toEndOf="@+id/tv"
+          app:layout_constraintTop_toBottomOf="@+id/header"
+          app:layout_constraintVertical_bias="0.059"
+       android:textColor="@color/black"
+       android:textSize="16sp"
        />
+
 
    <TextView
        android:id="@+id/tv_hasil"
-       android:layout_width="match_parent"
+       android:layout_width="wrap_content"
        android:layout_height="wrap_content"
-       android:text="TextView"
-       android:background="@color/white"
-       android:layout_marginTop="100dp"
-       />
+       android:text="HASIL"
+       android:textColor="@color/black"
+       android:textSize="30sp"
+       android:textStyle="bold"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/tv"
+       app:layout_constraintVertical_bias="0.113" />
+
+   <LinearLayout
+       android:id="@+id/subuh"
+       android:layout_width="400dp"
+       android:layout_height="100dp"
+       android:orientation="horizontal"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.454"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/tv_hasil"
+       app:layout_constraintVertical_bias="0.051">
+
+      <androidx.cardview.widget.CardView
+          android:layout_width="0dp"
+          android:layout_height="90dp"
+          android:layout_marginLeft="8dp"
+          android:layout_marginRight="8dp"
+          android:layout_weight="2"
+          android:padding="3dp"
+          app:cardCornerRadius="20dp">
+
+         <RelativeLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/purple_200">
 
 
-</LinearLayout>
+            <TextView
+                android:id="@+id/tvsubh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="Subuh"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_below="@id/tvsubh"
+                android:id="@+id/txt_subuh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="00.00"
+                android:textColor="@color/black"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+         </RelativeLayout>
+      </androidx.cardview.widget.CardView>
+
+   </LinearLayout>
+
+   <LinearLayout
+       android:id="@+id/duhur"
+       android:layout_width="180dp"
+       android:layout_height="130dp"
+       android:orientation="horizontal"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.069"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/subuh"
+       app:layout_constraintVertical_bias="0.033">
+
+      <androidx.cardview.widget.CardView
+          android:layout_width="0dp"
+          android:layout_height="120dp"
+          android:layout_marginLeft="8dp"
+          android:layout_marginRight="8dp"
+          android:layout_weight="2"
+          android:padding="3dp"
+          app:cardCornerRadius="20dp">
+
+         <RelativeLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/purple_500">
+
+
+            <TextView
+                android:id="@+id/tvduhur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="Duhur"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_duhur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvduhur"
+                android:layout_centerHorizontal="true"
+                android:text="00.00"
+                android:textColor="@color/black"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+
+         </RelativeLayout>
+      </androidx.cardview.widget.CardView>
+
+   </LinearLayout>
+
+   <LinearLayout
+       android:id="@+id/ashar"
+       android:layout_width="180dp"
+       android:layout_height="130dp"
+       android:orientation="horizontal"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.652"
+       app:layout_constraintStart_toEndOf="@+id/duhur"
+       app:layout_constraintTop_toBottomOf="@+id/subuh"
+       app:layout_constraintVertical_bias="0.033">
+
+      <androidx.cardview.widget.CardView
+          android:layout_width="0dp"
+          android:layout_height="120dp"
+          android:layout_marginLeft="8dp"
+          android:layout_marginRight="8dp"
+          android:layout_weight="2"
+
+          android:padding="3dp"
+          app:cardCornerRadius="20dp">
+
+         <RelativeLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/bgbuton">
+
+
+            <TextView
+                android:id="@+id/tvashar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="Ashar"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_ashar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvashar"
+                android:layout_centerHorizontal="true"
+                android:text="00.00"
+                android:textColor="@color/black"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+
+         </RelativeLayout>
+      </androidx.cardview.widget.CardView>
+
+   </LinearLayout>
+
+   <LinearLayout
+       android:id="@+id/maghrib"
+       android:layout_width="180dp"
+       android:layout_height="130dp"
+       android:orientation="horizontal"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.069"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/duhur"
+       app:layout_constraintVertical_bias="0.17">
+
+      <androidx.cardview.widget.CardView
+          android:layout_width="0dp"
+          android:layout_height="120dp"
+          android:layout_marginLeft="8dp"
+          android:layout_marginRight="8dp"
+          android:layout_weight="2"
+
+          android:padding="3dp"
+          app:cardCornerRadius="20dp">
+
+         <RelativeLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/bgbuton">
+
+
+            <TextView
+                android:id="@+id/tvmaghrib"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="Maghrib"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_maghrib"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvmaghrib"
+                android:layout_centerHorizontal="true"
+                android:text="00.00"
+                android:textColor="@color/black"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+
+         </RelativeLayout>
+      </androidx.cardview.widget.CardView>
+
+   </LinearLayout>
+
+   <LinearLayout
+       android:id="@+id/isya"
+       android:layout_width="180dp"
+       android:layout_height="130dp"
+       android:orientation="horizontal"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.644"
+       app:layout_constraintStart_toEndOf="@+id/maghrib"
+       app:layout_constraintTop_toBottomOf="@+id/ashar"
+       app:layout_constraintVertical_bias="0.17">
+
+      <androidx.cardview.widget.CardView
+          android:layout_width="0dp"
+          android:layout_height="120dp"
+          android:layout_marginLeft="8dp"
+          android:layout_marginRight="8dp"
+          android:layout_weight="2"
+          android:padding="3dp"
+          app:cardCornerRadius="20dp">
+
+         <RelativeLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/purple_200">
+
+
+            <TextView
+                android:id="@+id/tvisya"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="Isya"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_isya"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvisya"
+                android:layout_centerHorizontal="true"
+                android:text="00.00"
+                android:textColor="@color/black"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+
+         </RelativeLayout>
+      </androidx.cardview.widget.CardView>
+
+   </LinearLayout>
+
+   <TextView
+          android:id="@+id/txtTestApiNama"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

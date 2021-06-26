@@ -21,10 +21,21 @@
     <string name="notel">Nomor telepon</string>
 
     <string-array name="testspin">
-        <item>satu</item>
-        <item>dua</item>
-        <item>tiga</item>
-        <item>empat</item>
+        <item>Jambi</item>
+        <item>Medan</item>
+        <item>Jakarta</item>
+        <item>Bandung</item>
+        <item>Semarang</item>
+        <item>Yogyakarta</item>
+        <item>Surabaya</item>
+        <item>Denpasar</item>
+        <item>Mataram</item>
+        <item>Makasar</item>
+        <item>Pontianak</item>
+        <item>Palangkaraya</item>
+        <item>Banjarmasin</item>
+        <item>Samarinda</item>
+        <item>Jayapura</item>
     </string-array>
 
 </resources>
