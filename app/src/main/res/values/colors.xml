@@ -11,4 +11,10 @@
     <color name="bg">#FFECA2</color>
     <color name="bgatas">#FFDDA2</color>
     <color name="bgbuton">#E8A256</color>
+
+    <color name="subuh">#cbdfbd</color>
+    <color name="duhur">#f19c79</color>
+    <color name="ashar">#d4e09b</color>
+    <color name="maghrib">#a44a3f</color>
+    <color name="isya">#f6f4d2</color>
 </resources>

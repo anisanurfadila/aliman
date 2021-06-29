@@ -36,7 +36,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/bg">
+                android:background="@color/bgatas">
 
                <ImageView
                    android:id="@+id/gbrjadwal"
@@ -148,7 +148,7 @@
          <RelativeLayout
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             android:background="@color/purple_200">
+             android:background="@color/subuh">
 
 
             <TextView
@@ -202,7 +202,7 @@
          <RelativeLayout
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             android:background="@color/purple_500">
+             android:background="@color/duhur">
 
 
             <TextView
@@ -258,7 +258,7 @@
          <RelativeLayout
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             android:background="@color/bgbuton">
+             android:background="@color/ashar">
 
 
             <TextView
@@ -314,7 +314,7 @@
          <RelativeLayout
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             android:background="@color/bgbuton">
+             android:background="@color/maghrib">
 
 
             <TextView
@@ -369,7 +369,7 @@
          <RelativeLayout
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             android:background="@color/purple_200">
+             android:background="@color/isya">
 
 
             <TextView

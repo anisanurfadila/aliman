@@ -89,7 +89,7 @@ public class ActivitySholat extends AppCompatActivity implements AdapterView.OnI
         textashar = findViewById(R.id.txt_ashar);
         textmaghrib = findViewById(R.id.txt_maghrib);
         textisya = findViewById(R.id.txt_isya);
-
+/*
         try {
 
             OkHttpClient client = new OkHttpClient().newBuilder()
@@ -112,7 +112,7 @@ public class ActivitySholat extends AppCompatActivity implements AdapterView.OnI
                         ActivitySholat.this.runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                txtNama.setText(myResponse);
+                       //         txtNama.setText(myResponse);
                             }
                         });
                     }
@@ -124,7 +124,7 @@ public class ActivitySholat extends AppCompatActivity implements AdapterView.OnI
             e.printStackTrace();
         }
 
-        getData();;
+        getData();;*/
     }
 
         // getData();
@@ -195,7 +195,7 @@ public class ActivitySholat extends AppCompatActivity implements AdapterView.OnI
         mQueue.add(request);
     }*/
 
-    private void getData() {
+/*    private void getData() {
         AndroidNetworking.get("https://api.myquran.com/v1/sholat/jadwal/1609/2021/06/23")
                 .setPriority(Priority.LOW)
                 .build()
@@ -215,7 +215,7 @@ public class ActivitySholat extends AppCompatActivity implements AdapterView.OnI
                         // handle error
                     }
                 });
-    }
+    }*/
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -261,16 +261,6 @@ public class ActivitySholat extends AppCompatActivity implements AdapterView.OnI
                 textashar.setText("15.04");
                 textmaghrib.setText("17.35");
                 textisya.setText("18.50");
-              /*  1505
-                1638
-                1709
-                1810
-                2622
-                2013
-                2214
-                2113
-                2310
-                3329*/
                 break;
             case "Yogyakarta":
                 st_hasil.setText("Yogyakarta");

@@ -38,4 +38,9 @@
         <item>Jayapura</item>
     </string-array>
 
+    <style name="Theme.Aliman.popMe">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+    </style>
+
 </resources>

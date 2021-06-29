@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Aliman">
-        <activity android:name=".ActivitySholat"></activity>
+        <activity android:name=".PopupInfo"
+            android:theme="@style/Theme.Aliman.popMe"></activity>
+        <activity android:name=".ActivitySholat" />
         <activity android:name=".ActivityDzikirCounter" />
         <activity android:name=".ActivityDzikir" />
         <activity android:name=".MainActivity">
