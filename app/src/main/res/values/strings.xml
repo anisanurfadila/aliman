@@ -20,6 +20,7 @@
     <string name="nama">Nama</string>
     <string name="notel">Nomor telepon</string>
 
+    <!--membuat string array-->
     <string-array name="testspin">
         <item>Jambi</item>
         <item>Medan</item>
